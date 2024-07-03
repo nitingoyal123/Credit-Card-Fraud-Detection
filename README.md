@@ -44,7 +44,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 from imblearn.over_sampling import SMOTE
 
 # Data Loading and Preprocessing
-data = pd.read_csv('creditcard.csv', on_bad_lines='skip')
+data = pd.read_csv('https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/creditcard.csv', on_bad_lines='skip')
 data['Amount'] = StandardScaler().fit_transform(pd.DataFrame(data['Amount']))
 
 def data_cleaning(data):
